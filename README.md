@@ -2,6 +2,13 @@
 
 <h2 align="center">Want to Help? Click the Star in the Upper-Right Corner! ⭐</h2>
 
+<table>
+  <tr>
+    <td colspan="2"><img src="https://github.com/user-attachments/assets/122f7207-b706-4b8d-8845-f21a86f9bf77" width="100%"/></td>
+  </tr>
+</table>
+
+
 **NOTE**: This utilizes Lidarr API Version - `1`.
  
 ## Table of Contents
@@ -62,6 +69,25 @@ My 12-year-old daughter is passionate about singing, dancing, and exploring STEM
    - Tracks which artists/albums have been processed
    - Automatically resets this tracking after a configurable time period
 5. **Repeat Cycle**: Waits for a configurable period before starting the next cycle
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/ef212161-e14c-484c-b6a1-20986022a2c3" width="100%"/>
+      <p align="center"><em>Missing Movies Demo</em></p>
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/4843b80b-ea1f-4ff0-b76f-8187e3912883" width="100%"/>
+      <p align="center"><em>Quality Upgrade Demo</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/3e95f6d5-4a96-4bb8-a5b9-1d7b871ff94a" width="100%"/>
+      <p align="center"><em>State Management System</em></p>
+    </td>
+  </tr>
+</table>
 
 ## Configuration Options
 
