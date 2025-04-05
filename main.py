@@ -30,8 +30,11 @@ def load_state():
     try:
         with open(STATE_FILE_PATH, 'r') as f:
             state = json.load(f)
-            # Convert string date back to datetime
-            state["last_reset_time"] = datetime.fromisoformat(state["last_reset_time"])
+            
+            # Ensure last_reset_time exists
+            if "last_reset_time" not in state:
+                state["last_reset_time"] = datetime.now().isoformat()
+                
             return state
     except Exception as e:
         logger.error(f"Error loading state file: {e}")
@@ -44,8 +47,9 @@ def load_state():
 def save_state(state):
     """Save the state file with processed items and last reset time"""
     try:
-        # Convert datetime to string for JSON serialization
-        state["last_reset_time"] = state["last_reset_time"].isoformat()
+        # Ensure last_reset_time is a string for JSON serialization
+        if isinstance(state["last_reset_time"], datetime):
+            state["last_reset_time"] = state["last_reset_time"].isoformat()
         
         with open(STATE_FILE_PATH, 'w') as f:
             json.dump(state, f)
@@ -59,7 +63,18 @@ def check_reset_state(state):
         return state
         
     now = datetime.now()
-    last_reset = state["last_reset_time"]
+    
+    # Convert string to datetime if needed
+    if isinstance(state["last_reset_time"], str):
+        try:
+            last_reset = datetime.fromisoformat(state["last_reset_time"])
+        except ValueError:
+            # If parsing fails, reset the time to now
+            logger.warning("Invalid datetime format in state file. Resetting to now.")
+            last_reset = now
+    else:
+        last_reset = state["last_reset_time"]
+    
     reset_interval = timedelta(hours=STATE_RESET_INTERVAL_HOURS)
     
     if now - last_reset > reset_interval:
