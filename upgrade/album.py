@@ -7,7 +7,7 @@ Handles quality cutoff upgrade operations for albums
 import random
 import time
 import requests
-from typing import Dict, List, Optional, Tuple, Union, Any, Bool
+from typing import Dict, List, Optional, Tuple, Union, Any
 from utils.logger import logger
 from config import HUNT_UPGRADE_ALBUMS, SLEEP_DURATION, MONITORED_ONLY, RANDOM_SELECTION, API_URL, API_KEY
 from api import refresh_artist, album_search
