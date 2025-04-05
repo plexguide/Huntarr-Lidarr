@@ -327,7 +327,6 @@ def process_artists_missing(processed_artists=None) -> List[int]:
         if not refresh_resp or "id" not in refresh_resp:
             logger.warning("WARNING: Could not refresh. Skipping this artist.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
         logger.info(f"Refresh command accepted (ID={refresh_resp['id']}). Waiting 5s...")
         time.sleep(5)
@@ -465,7 +464,6 @@ def process_albums_missing(processed_albums=None) -> List[int]:
         if not refresh_resp or "id" not in refresh_resp:
             logger.warning(f"WARNING: Could not refresh artist {artist_name}. Skipping album.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
         logger.info(f"Refresh command accepted (ID={refresh_resp['id']}). Waiting 5s...")
         time.sleep(5)
@@ -618,7 +616,6 @@ def process_album_upgrades() -> bool:
         if not ref_resp or "id" not in ref_resp:
             logger.warning("WARNING: Refresh command failed. Skipping this album.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
         logger.info(f"Refresh accepted (ID={ref_resp['id']}). Waiting 5s...")
         time.sleep(5)
@@ -632,7 +629,6 @@ def process_album_upgrades() -> bool:
         else:
             logger.warning(f"WARNING: AlbumSearch failed for album ID={album_id}.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
 
         logger.info(f"Album upgrade processed.")
@@ -688,8 +684,8 @@ def main_loop() -> None:
         
         # Sleep at the end of the cycle only
         logger.info(f"Cycle complete. Sleeping {SLEEP_DURATION}s before next cycle...")
-        time.sleep(SLEEP_DURATION)
         logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
+        time.sleep(SLEEP_DURATION)
 
 
 if __name__ == "__main__":

@@ -171,7 +171,6 @@ def process_album_upgrades() -> bool:
         if not ref_resp or "id" not in ref_resp:
             logger.warning("WARNING: Refresh command failed. Skipping this album.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
         logger.info(f"Refresh accepted (ID={ref_resp['id']}). Waiting 5s...")
         time.sleep(5)
@@ -185,12 +184,11 @@ def process_album_upgrades() -> bool:
         else:
             logger.warning(f"WARNING: AlbumSearch failed for album ID={album_id}.")
             time.sleep(10)
-            logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
             continue
 
         logger.info(f"Sleeping {SLEEP_DURATION}s after upgrade attempt...")
-        time.sleep(SLEEP_DURATION)
         logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
+        time.sleep(SLEEP_DURATION)
 
     logger.info(f"Completed processing {processed_count} album upgrades total in this run.")
     return processed_count > 0

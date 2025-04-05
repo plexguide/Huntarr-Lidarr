@@ -134,8 +134,8 @@ def process_artists_missing(processed_artists: List[int] = None) -> List[int]:
 
         processed_count += 1
         logger.info(f"Processed artist. Sleeping {SLEEP_DURATION}s...")
-        time.sleep(SLEEP_DURATION)
         logger.info("⭐ Tool Great? Donate @ https://donate.plex.one for Daughter's College Fund!")
+        time.sleep(SLEEP_DURATION)
     
     # Return updated processed list
     return processed_artists + newly_processed
