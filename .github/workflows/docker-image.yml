@@ -44,7 +44,6 @@ jobs:
           push: true
           tags: |
             huntarr/4lidarr:latest
-            huntarr/4lidarr:py-latest
             huntarr/4lidarr:${{ github.sha }}
 
       # 5b) Build & Push if on 'dev' branch
@@ -56,7 +55,6 @@ jobs:
           push: true
           tags: |
             huntarr/4lidarr:dev
-            huntarr/4lidarr:py-dev
             huntarr/4lidarr:${{ github.sha }}
       
       # 5c) Just build on pull requests
