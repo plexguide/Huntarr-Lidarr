@@ -141,7 +141,7 @@ docker run -d --name huntarr-lidarr \
   -e API_URL="http://your-lidarr-address:8686" \
   -e HUNT_MISSING_MODE="album" \
   -e HUNT_MISSING_ITEMS="1" \
-  -e HUNT_UPGRADE_ALBUMS="1" \
+  -e HUNT_UPGRADE_ALBUMS="0" \
   -e SLEEP_DURATION="900" \
   -e RANDOM_SELECTION="true" \
   -e MONITORED_ONLY="true" \
@@ -171,7 +171,7 @@ services:
       API_URL: "http://your-lidarr-address:8686"
       HUNT_MISSING_MODE: "album"
       HUNT_MISSING_ITEMS: "1"
-      HUNT_UPGRADE_ALBUMS: "1"
+      HUNT_UPGRADE_ALBUMS: "0"
       SLEEP_DURATION: "900"
       RANDOM_SELECTION: "true"
       MONITORED_ONLY: "true"
@@ -196,7 +196,7 @@ docker run -d --name huntarr-lidarr \
   -e API_URL="http://your-lidarr-address:8686" \
   -e HUNT_MISSING_MODE="album" \
   -e HUNT_MISSING_ITEMS="1" \
-  -e HUNT_UPGRADE_ALBUMS="1" \
+  -e HUNT_UPGRADE_ALBUMS="0" \
   -e SLEEP_DURATION="900" \
   -e RANDOM_SELECTION="true" \
   -e MONITORED_ONLY="true" \
@@ -225,7 +225,7 @@ Environment="API_KEY=your-api-key"
 Environment="API_URL=http://localhost:8686"
 Environment="HUNT_MISSING_MODE=album"
 Environment="HUNT_MISSING_ITEMS=1"
-Environment="HUNT_UPGRADE_ALBUMS=1"
+Environment="HUNT_UPGRADE_ALBUMS=0"
 Environment="SLEEP_DURATION=900"
 Environment="RANDOM_SELECTION=true"
 Environment="MONITORED_ONLY=true"
