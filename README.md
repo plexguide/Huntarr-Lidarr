@@ -147,7 +147,7 @@ docker run -d --name huntarr-lidarr \
   -e MONITORED_ONLY="true" \
   -e STATE_RESET_INTERVAL_HOURS="168" \
   -e DEBUG_MODE="false" \
-  huntarr/4lidarr:latest
+  huntarr/4lidarr:2.0
 ```
 
 To check on the status of the program, you should see new files downloading or you can type:
@@ -163,7 +163,7 @@ For those who prefer Docker Compose, add this to your `docker-compose.yml` file:
 version: "3.8"
 services:
   huntarr-lidarr:
-    image: huntarr/4lidarr:latest
+    image: huntarr/4lidarr:2.0
     container_name: huntarr-lidarr
     restart: always
     environment:
@@ -202,7 +202,7 @@ docker run -d --name huntarr-lidarr \
   -e MONITORED_ONLY="true" \
   -e STATE_RESET_INTERVAL_HOURS="168" \
   -e DEBUG_MODE="false" \
-  huntarr/4lidarr:latest
+  huntarr/4lidarr:2.0
 ```
 
 ### SystemD Service
