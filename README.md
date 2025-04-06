@@ -1,4 +1,4 @@
-# Huntarr [Lidarr Edition] - Force Lidarr to Hunt Missing Music & Upgrade Music Qualities 
+# Huntarr [Lidarr Edition] - Force Lidarr to Hunt Missing Music & Upgrade Music Qualities
 
 <h2 align="center">Want to Help? Click the Star in the Upper-Right Corner! ⭐</h2>
 
