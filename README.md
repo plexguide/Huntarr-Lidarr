@@ -9,7 +9,7 @@
 </table>
 
 
-**NOTE**: This utilizes Lidarr API Version - `1`.
+**NOTE**: This utilizes Lidarr API Version - `1`. Legacy Name of this Program: Lidarr Hunter.
  
 ## Table of Contents
 - [Overview](#overview)
